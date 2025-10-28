@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oddtype Shop — 전체 제품</title>
+  <meta name="description" content="Oddtype Shop: 스킨케어와 립+치크 제품을 모두 만나보세요." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <style>
+    .shop-hero{padding:48px 16px 8px;border-bottom:1px solid var(--line)}
+    .shop-hero .section-sub{margin-left:0;padding-left:0}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;padding:8px 16px;border-bottom:1px solid var(--line)}
+    .chip{border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:transparent;color:var(--fg);cursor:pointer;transition:all .2s ease}
+    .chip:hover{background:var(--card);border-color:var(--fg);transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:16px}
+    @media (max-width: 980px){.grid{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width: 680px){.grid{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  
+  <header class="site-header">
+    <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+    <a class="brand" href="./index.html">Oddtype</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./index.html#about">ABOUT</a>
+      <a href="./shop.html" aria-current="page">SHOP</a>
+      <a href="./futures.html">FUTURES</a>
+      <a href="./sets.html">SETS</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="검색">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 20L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="계정">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M4 20c1.5-3.5 5-6 8-6s6.5 2.5 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="장바구니">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M6 6l-2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+          <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" aria-live="polite"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-hero">
+      <h1>전체 제품</h1>
+      <p class="section-sub">스킨케어와 립+치크 카테고리에서 원하는 제품을 찾아보세요.</p>
+    </section>
+    <div class="filters">
+      <button class="chip" data-filter="all">전체</button>
+      <button class="chip" data-filter="skin" id="skin">스킨케어</button>
+      <button class="chip" data-filter="lipcheek" id="lipcheek">립+치크</button>
+      <button class="chip" data-filter="new">신제품</button>
+    </div>
+
+    <section class="grid" id="shop-grid">
+      <!-- skin -->
+      <article class="card" data-cat="skin new">
+        <div class="card-media" style="background-image:url('./assets/img/아이패치.jpeg');background-size:cover;background-position:center"></div>
+        <h3 class="card-title">펩타이드 아이 프렙</h3>
+        <p class="card-sub">붓기 완화 아이 패치</p>
+        <div class="card-cta"><button class="btn sm" data-price="25000">구매 - 32,500원</button></div>
+      </article>
+      <article class="card" data-cat="skin award">
+        <div class="card-media" style="background-image:url('./assets/img/밀크폼.png');background-size:cover;background-position:center"></div>
+        <h3 class="card-title">글레이징 밀크</h3>
+        <p class="card-sub">세라마이드 에센스</p>
+        <div class="card-cta"><button class="btn sm" data-price="32000">구매 - 41,600원</button></div>
+      </article>
+      <article class="card" data-cat="skin">
+        <div class="card-media" style="background-image:url('./assets/img/윤광.png');background-size:cover;background-position:center"></div>
+        <h3 class="card-title">펩타이드 글레이징 플루이드</h3>
+        <p class="card-sub">윤광 젤 세럼</p>
+        <div class="card-cta"><button class="btn sm" data-price="32000">구매 - 41,600원</button></div>
+      </article>
+      <article class="card" data-cat="skin new">
+        <div class="card-media" style="background-image:url('./assets/img/미스트.png');background-size:cover;background-position:center"></div>
+        <h3 class="card-title">글레이징 미스트</h3>
+        <p class="card-sub">수분 충전 페이스 스프레이</p>
+        <div class="card-cta"><button class="btn sm" data-price="30000">구매 - 39,000원</button></div>
+      </article>
+      <article class="card" data-cat="skin">
+        <div class="card-media" style="background-image:url('./assets/img/폼클렌징.png');background-size:cover;background-position:center"></div>
+        <h3 class="card-title">파인애플 리프레시</h3>
+        <p class="card-sub">PGA 데일리 클렌저</p>
+        <div class="card-cta"><button class="btn sm" data-price="30000">구매 - 39,000원</button></div>
+      </article>
+
+      <!-- lip+cheek -->
+      <article class="card" data-cat="lipcheek new">
+        <div class="card-media" style="background-image:url('./assets/img/에스프레소.webp');background-size:cover;background-position:center"></div>
+        <h3 class="card-title">펩타이드 립 틴트</h3>
+        <div class="card-cta"><button class="btn sm" data-price="20000">구매 - 26,000원</button></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div>
+        <h3>소셜</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/oddtype_official/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="#">Youtube</a></li>
+          <li><a href="https://www.tiktok.com/@oddtype_official" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>공식</h3>
+        <ul>
+          <li><a href="#">개인정보 처리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="copyright">© Oddtype 2025</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/app.js"></script>
+  <script>
+    // simple client-side filter
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('#shop-grid .card');
+    chips.forEach(chip=>chip.addEventListener('click',()=>{
+      const f = chip.getAttribute('data-filter');
+      cards.forEach(c=>{
+        if(f==='all' || c.getAttribute('data-cat').includes(f)){
+          c.style.display='flex';
+        }else{
+          c.style.display='none';
+        }
+      });
+    }));
+  </script>
+</body>
+</html>
+

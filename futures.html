@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oddtype Futures — 지속 가능한 아름다움</title>
+  <meta name="description" content="Oddtype Futures: 지속 가능성, 임팩트, 소재 혁신에 대한 약속." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <style>
+    .futures-hero{padding:48px 16px 8px;border-bottom:1px solid var(--line)}
+    .futures-hero h1{margin:0;font-size:clamp(24px,4.5vw,36px)}
+    .futures-hero p{margin:8px 0 0;color:var(--muted)}
+    .futures-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:16px}
+    .f-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:all .3s ease;cursor:pointer}
+    .f-card:hover{transform:scale(1.05);box-shadow:0 8px 24px rgba(0,0,0,0.15);border-color:var(--accent)}
+    .f-media{aspect-ratio:16/9;background:#1a1a22}
+    .f-body{padding:16px}
+    .f-body h3{margin:0 0 6px;font-size:16px}
+    .f-body p{margin:0;color:var(--muted)}
+    @media (max-width: 900px){.futures-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width: 560px){.futures-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  
+  <header class="site-header">
+    <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+    <a class="brand" href="./index.html">Oddtype</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./index.html#about">ABOUT</a>
+      <a href="./shop.html">SHOP</a>
+      <a href="./futures.html" aria-current="page">FUTURES</a>
+      <a href="./sets.html">SETS</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="검색">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 20L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="계정">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M4 20c1.5-3.5 5-6 8-6s6.5 2.5 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="장바구니">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M6 6l-2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+          <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" aria-live="polite"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="futures-hero">
+      <h1>Oddtype Futures</h1>
+      <p>지속 가능한 아름다움을 위한 우리의 약속: 재료, 포장, 그리고 임팩트.</p>
+    </section>
+
+    <section class="futures-grid" aria-label="Futures pillars">
+      <article class="f-card">
+        <div class="f-media" style="background-image:url('./assets/img/환경.webp');background-size:cover;background-position:center"></div>
+        <div class="f-body">
+          <h3>의식 있는 성분</h3>
+          <p>피부 장벽을 우선으로, 검증된 원료와 안전 기준을 고수합니다.</p>
+        </div>
+      </article>
+      <article class="f-card">
+        <div class="f-media" style="background-image:url('./assets/img/지속 가능한 패키지.jpeg');background-size:cover;background-position:center"></div>
+        <div class="f-body">
+          <h3>지속 가능한 패키징</h3>
+          <p>포스트컨슈머 재활용 소재 사용 확대와 재사용 가능한 디자인을 지향합니다.</p>
+        </div>
+      </article>
+      <article class="f-card">
+        <div class="f-media" style="background-image:url('./assets/img/여성.webp');background-size:cover;background-position:center"></div>
+        <div class="f-body">
+          <h3>커뮤니티 임팩트</h3>
+          <p>여성의 장벽을 허무는 단체와의 파트너십을 통해 기회를 확장합니다.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div>
+        <h3>소셜</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/oddtype_official/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="#">Youtube</a></li>
+          <li><a href="https://www.tiktok.com/@oddtype_official" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>공식</h3>
+        <ul>
+          <li><a href="#">개인정보 처리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">접근성</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">문의</a></li>
+          <li><a href="#">이벤트</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="copyright">© Oddtype 2025</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
+
